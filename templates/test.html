@@ -1,0 +1,19 @@
+<!doctype html>
+<title>Hello from Flask</title>
+{% if filename %}
+  <h1>Predicted Mask </h1>
+  <p> <img src="{{ url_for('display_image', filename=filename) }}"></p>
+  <p>{{filename}}</p>
+{% else %}
+  <h1>no image for whatever reason</h1>
+{% endif %}
+
+<!-- {% if filenames %}
+	{% for filename in filenames %}
+		<div>
+			<img src="{{ url_for('display_image', filename=filename) }}">
+		</div>
+	{% endfor %}
+{% else %}
+  <h1>no image for whatever reason</h1>
+{% endif %} -->
